@@ -1,6 +1,10 @@
 (ns parent.core
   (:gen-class)
-  (:require [child.core :as child]))
+  (:require [child.core :as child]
+            [selmer.parser :as parser]
+            [clojure.java.io :as io]))
+
+;; (parser/set-resource-path! (io/resource "templates"))
 
 (defn parent
   []
